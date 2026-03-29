@@ -98,75 +98,104 @@ export default function Hero() {
             <div className="relative w-64 sm:w-72">
               {/* Phone frame */}
               <div
-                className="relative bg-white rounded-[2.5rem] shadow-2xl overflow-hidden"
-                style={{ border: "10px solid #0d3d0d", aspectRatio: "9/19" }}
+                className="relative rounded-[2.5rem] shadow-2xl overflow-hidden"
+                style={{
+                  border: "10px solid #111111",
+                  aspectRatio: "9/19",
+                  backgroundColor: "#1C1C1C",
+                }}
               >
                 {/* Status bar */}
                 <div
-                  className="flex items-center justify-between px-5 py-2 text-white text-xs font-medium"
-                  style={{ backgroundColor: "#1C5C1C" }}
+                  className="flex items-center justify-between px-5 py-2 text-xs font-medium"
+                  style={{ backgroundColor: "#141414", color: "#AAAAAA" }}
                 >
                   <span>9:41</span>
                   <div className="flex gap-1.5 items-center">
-                    <div className="w-3.5 h-1.5 border border-white rounded-sm flex">
-                      <div className="w-3/4 bg-white rounded-sm" />
+                    <div
+                      className="w-3.5 h-1.5 rounded-sm flex"
+                      style={{ border: "1px solid #555555" }}
+                    >
+                      <div className="w-3/4 rounded-sm" style={{ backgroundColor: "#6DC267" }} />
                     </div>
                   </div>
                 </div>
 
                 {/* App header */}
                 <div
-                  className="px-4 py-3 text-white"
-                  style={{ backgroundColor: "#1C5C1C" }}
+                  className="px-4 py-3"
+                  style={{ backgroundColor: "#202020", borderBottom: "1px solid #2A2A2A" }}
                 >
-                  <div className="text-xs text-green-200 mb-0.5">Fazenda Santa Clara</div>
-                  <div className="text-base font-bold">Registros de Campo</div>
+                  <div className="text-xs mb-0.5" style={{ color: "#6DC267" }}>
+                    Fazenda Santa Clara
+                  </div>
+                  <div className="text-base font-bold" style={{ color: "#EFEFEF" }}>
+                    Registros de Campo
+                  </div>
                 </div>
 
                 {/* App content */}
-                <div className="bg-gray-50 flex-1 p-3 space-y-2">
+                <div className="flex-1 p-3 space-y-2" style={{ backgroundColor: "#1C1C1C" }}>
                   {[
-                    { label: "Pecuária", count: "24 registros", color: "#d97706" },
-                    { label: "Agricultura", count: "18 registros", color: "#16a34a" },
-                    { label: "Administrativo", count: "11 registros", color: "#2563eb" },
+                    { label: "Pecuária", count: "24 registros", color: "#E6A817" },
+                    { label: "Agricultura", count: "18 registros", color: "#6DC267" },
+                    { label: "Administrativo", count: "11 registros", color: "#5B9BD5" },
                   ].map((folder) => (
                     <div
                       key={folder.label}
-                      className="bg-white rounded-xl p-3 shadow-sm flex items-center gap-3"
+                      className="rounded-xl p-3 flex items-center gap-3"
+                      style={{ backgroundColor: "#242424", border: "1px solid #2E2E2E" }}
                     >
                       <div
-                        className="w-9 h-9 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-                        style={{ backgroundColor: folder.color }}
+                        className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-bold flex-shrink-0"
+                        style={{
+                          backgroundColor: folder.color + "22",
+                          color: folder.color,
+                        }}
                       >
                         {folder.label[0]}
                       </div>
                       <div>
-                        <div className="text-xs font-semibold text-gray-800">
+                        <div className="text-xs font-semibold" style={{ color: "#EFEFEF" }}>
                           {folder.label}
                         </div>
-                        <div className="text-xs text-gray-400">{folder.count}</div>
+                        <div className="text-xs" style={{ color: "#666666" }}>
+                          {folder.count}
+                        </div>
                       </div>
                     </div>
                   ))}
 
-                  <div className="bg-white rounded-xl p-3 shadow-sm mt-2">
-                    <div className="text-xs font-semibold text-gray-700 mb-1.5">
+                  <div
+                    className="rounded-xl p-3 mt-2"
+                    style={{ backgroundColor: "#242424", border: "1px solid #2E2E2E" }}
+                  >
+                    <div className="text-xs font-semibold mb-1.5" style={{ color: "#AAAAAA" }}>
                       Último registro
                     </div>
                     <div
-                      className="text-xs text-white rounded-lg px-2.5 py-2"
-                      style={{ backgroundColor: "#1C5C1C" }}
+                      className="text-xs rounded-lg px-2.5 py-2"
+                      style={{ backgroundColor: "#2D5A27", color: "#E0F0DC" }}
                     >
                       Vacinação do lote B — 40 cabeças ✓
                     </div>
-                    <div className="text-xs text-gray-400 mt-1.5">
+                    <div className="text-xs mt-1.5" style={{ color: "#555555" }}>
                       Hoje, 10:32 · João Silva
                     </div>
                   </div>
 
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-3 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0" />
-                    <div className="text-xs text-yellow-800 font-medium">
+                  <div
+                    className="rounded-xl p-3 flex items-center gap-2"
+                    style={{
+                      backgroundColor: "rgba(230, 168, 23, 0.1)",
+                      border: "1px solid rgba(230, 168, 23, 0.2)",
+                    }}
+                  >
+                    <div
+                      className="w-2 h-2 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: "#E6A817" }}
+                    />
+                    <div className="text-xs font-medium" style={{ color: "#E6A817" }}>
                       Lembrete: Adubação safra — amanhã
                     </div>
                   </div>
