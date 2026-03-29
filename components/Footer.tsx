@@ -4,142 +4,93 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer className="border-t" style={{ backgroundColor: "#141414", borderColor: "#292929" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4 group">
+            <a href="/" className="flex items-center gap-2 mb-4">
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center"
-                style={{ backgroundColor: "#1C5C1C" }}
+                style={{ backgroundColor: "#2D5A27" }}
               >
                 <Leaf className="w-4 h-4 text-white" strokeWidth={2.5} />
               </div>
-              <span
-                className="text-xl font-bold tracking-tight"
-                style={{ color: "#1C5C1C" }}
-              >
+              <span className="text-xl font-bold tracking-tight" style={{ color: "#6DC267" }}>
                 agNOUT
               </span>
             </a>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
+            <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#666666" }}>
               Gestão agrícola inteligente para fazendas de todos os tamanhos. Do
               campo ao escritório, tudo conectado.
             </p>
           </div>
 
-          {/* Product links */}
+          {/* Product */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider" style={{ color: "#888888" }}>
               Produto
             </h4>
             <ul className="space-y-2.5">
-              <li>
-                <a
-                  href="#features"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Funcionalidades
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#como-funciona"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Como funciona
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#planos"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Planos
-                </a>
-              </li>
+              {[
+                { href: "#features", label: "Funcionalidades" },
+                { href: "#como-funciona", label: "Como funciona" },
+                { href: "#planos", label: "Planos" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="footer-link text-sm">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider" style={{ color: "#888888" }}>
               Empresa
             </h4>
             <ul className="space-y-2.5">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Sobre
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Contato
-                </a>
-              </li>
+              {["Sobre", "Blog", "Contato"].map((label) => (
+                <li key={label}>
+                  <a href="#" className="footer-link text-sm">
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4 uppercase tracking-wider">
+            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wider" style={{ color: "#888888" }}>
               Legal
             </h4>
             <ul className="space-y-2.5">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Termos de uso
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  Privacidade
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
-                >
-                  LGPD
-                </a>
-              </li>
+              {["Termos de uso", "Privacidade", "LGPD"].map((label) => (
+                <li key={label}>
+                  <a href="#" className="footer-link text-sm">
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-100">
-          <p className="text-sm text-gray-400">
+        <div
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t"
+          style={{ borderColor: "#292929" }}
+        >
+          <p className="text-sm" style={{ color: "#444444" }}>
             &copy; {currentYear} agNOUT. Todos os direitos reservados.
           </p>
           <a
             href="https://app.agnout.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-semibold transition-colors hover:opacity-80"
-            style={{ color: "#1C5C1C" }}
+            className="footer-app-link text-sm font-semibold"
           >
             app.agnout.com.br &rarr;
           </a>

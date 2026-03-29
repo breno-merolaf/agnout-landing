@@ -1,12 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --color-primary: #1C5C1C;
-  --color-primary-hover: #2d7a2d;
-  --color-primary-light: #e8f5e9;
-  --color-primary-dark: #144014;
+  --background: #1C1C1C;
+  --background-elevated: #242424;
+  --background-section: #202020;
+  --background-dark: #141414;
+  --foreground: #EFEFEF;
+  --foreground-muted: #AAAAAA;
+  --foreground-subtle: #666666;
+  --color-primary: #2D5A27;
+  --color-primary-hover: #3A7032;
+  --color-primary-accent: #6DC267;
+  --color-primary-badge-bg: rgba(45, 90, 39, 0.2);
+  --color-primary-badge-text: #8DD889;
+  --border: #333333;
+  --border-subtle: #292929;
 }
 
 @theme inline {
@@ -32,9 +40,84 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 
 /* Smooth section transitions */
 section {
   scroll-margin-top: 80px;
+}
+
+/* Hover utilities — dark theme */
+.btn-primary {
+  background-color: #2D5A27;
+  color: #ffffff;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  background-color: #3A7032;
+  box-shadow: 0 8px 24px rgba(45, 90, 39, 0.45);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333333;
+  color: #EFEFEF;
+  transition: background-color 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border: 2px solid #2D5A27;
+  color: #6DC267;
+  transition: background-color 0.15s ease;
+}
+.btn-outlined:hover {
+  background-color: rgba(45, 90, 39, 0.15);
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #2D5A27;
+  transition: background-color 0.15s ease;
+}
+.btn-white:hover {
+  background-color: #E8F5E9;
+}
+
+.nav-link {
+  color: #AAAAAA;
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: #EFEFEF;
+}
+
+.footer-link {
+  color: #666666;
+  transition: color 0.15s ease;
+}
+.footer-link:hover {
+  color: #AAAAAA;
+}
+
+.footer-app-link {
+  color: #2D5A27;
+  transition: color 0.15s ease;
+}
+.footer-app-link:hover {
+  color: #6DC267;
+}
+
+.card-dark {
+  background-color: #242424;
+  border: 1px solid #333333;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card-dark:hover {
+  border-color: #3A3A3A;
+  transform: translateY(-2px);
 }

@@ -8,19 +8,24 @@ export default function SocialProof() {
   ];
 
   return (
-    <section className="bg-white py-10 border-b border-gray-100">
+    <section
+      className="py-10 border-b"
+      style={{ backgroundColor: "#1C1C1C", borderColor: "#292929" }}
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-sm font-medium text-gray-400 uppercase tracking-widest mb-8">
+        <p
+          className="text-center text-sm font-medium uppercase tracking-widest mb-8"
+          style={{ color: "#555555" }}
+        >
           Fazendas que já usam o agNOUT
         </p>
 
-        {/* Desktop: horizontal row | Mobile: wrap */}
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
           {farms.map((farm) => (
             <span
               key={farm}
-              className="text-base font-semibold text-gray-300 whitespace-nowrap select-none"
-              style={{ letterSpacing: "-0.01em" }}
+              className="text-base font-semibold whitespace-nowrap select-none"
+              style={{ color: "#3A3A3A", letterSpacing: "-0.01em" }}
             >
               {farm}
             </span>

@@ -29,33 +29,31 @@ export default function HowItWorks() {
     <section
       id="como-funciona"
       className="py-20 lg:py-28"
-      style={{ backgroundColor: "#f8faf8" }}
+      style={{ backgroundColor: "#202020" }}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
         <div className="text-center mb-16">
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-4"
-            style={{ backgroundColor: "#e8f5e9", color: "#1C5C1C" }}
+            style={{ backgroundColor: "rgba(45, 90, 39, 0.2)", color: "#8DD889" }}
           >
             Como funciona
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight" style={{ color: "#EFEFEF" }}>
             Comece em{" "}
-            <span style={{ color: "#1C5C1C" }}>3 passos simples</span>
+            <span style={{ color: "#6DC267" }}>3 passos simples</span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: "#AAAAAA" }}>
             Em menos de 10 minutos, sua fazenda já está organizada e sua equipe
             conectada. Sem treinamentos complicados.
           </p>
         </div>
 
-        {/* Steps */}
         <div className="relative">
           {/* Connector line (desktop) */}
           <div
             className="hidden lg:block absolute top-14 left-1/2 -translate-x-1/2 w-2/3 h-0.5"
-            style={{ backgroundColor: "#e8f5e9" }}
+            style={{ backgroundColor: "#333333" }}
           />
 
           <div className="grid lg:grid-cols-3 gap-10 lg:gap-8">
@@ -63,34 +61,34 @@ export default function HowItWorks() {
               const Icon = step.icon;
               return (
                 <div key={step.number} className="relative flex flex-col items-center text-center">
-                  {/* Step number + icon */}
                   <div className="relative mb-6">
-                    {/* Outer ring */}
                     <div
                       className="w-28 h-28 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: "#e8f5e9" }}
+                      style={{ backgroundColor: "rgba(45, 90, 39, 0.15)" }}
                     >
-                      {/* Inner circle */}
                       <div
                         className="w-20 h-20 rounded-full flex items-center justify-center text-white shadow-md"
-                        style={{ backgroundColor: "#1C5C1C" }}
+                        style={{ backgroundColor: "#2D5A27" }}
                       >
                         <Icon className="w-9 h-9" strokeWidth={1.5} />
                       </div>
                     </div>
-                    {/* Step number badge */}
                     <div
-                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-white flex items-center justify-center text-xs font-bold shadow-sm border-2"
-                      style={{ color: "#1C5C1C", borderColor: "#1C5C1C" }}
+                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-sm border-2"
+                      style={{
+                        backgroundColor: "#202020",
+                        color: "#6DC267",
+                        borderColor: "#2D5A27",
+                      }}
                     >
                       {i + 1}
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg font-bold mb-3" style={{ color: "#EFEFEF" }}>
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
+                  <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#999999" }}>
                     {step.description}
                   </p>
                 </div>
@@ -99,18 +97,16 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center mt-14">
           <a
             href="https://app.agnout.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 text-white font-semibold rounded-xl text-base transition-all hover:shadow-lg hover:opacity-90"
-            style={{ backgroundColor: "#1C5C1C" }}
+            className="btn-primary inline-flex items-center gap-2 px-6 py-3.5 font-semibold rounded-xl text-base"
           >
             Criar minha fazenda grátis
           </a>
-          <p className="text-sm text-gray-400 mt-3">
+          <p className="text-sm mt-3" style={{ color: "#666666" }}>
             Sem cartão de crédito. Sem compromisso.
           </p>
         </div>

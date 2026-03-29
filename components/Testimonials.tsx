@@ -6,7 +6,7 @@ const testimonials = [
     role: "Proprietário",
     farm: "Fazenda Santa Clara — GO",
     avatar: "CM",
-    color: "#1C5C1C",
+    color: "#6DC267",
     quote:
       "Antes usávamos caderno e WhatsApp para tudo. Com o agNOUT, cada atividade fica registrada com foto e data, e consigo acompanhar o que acontece na fazenda pelo celular mesmo estando na cidade. Mudou completamente a gestão.",
   },
@@ -15,7 +15,7 @@ const testimonials = [
     role: "Gestora Administrativa",
     farm: "Grupo Cerrado Verde — MT",
     avatar: "AR",
-    color: "#2563eb",
+    color: "#5B9BD5",
     quote:
       "A parte de lembretes é o que mais uso. Vacinações, contratos, manutenções — tudo tem data e aparece pra minha equipe na hora certa. O Seu Chico IA surpreende quando pede um resumo do mês: ele traz exatamente o que eu preciso.",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     role: "Gerente de Pecuária",
     farm: "Estância São Benedito — MS",
     avatar: "RF",
-    color: "#d97706",
+    color: "#E6A817",
     quote:
       "Trabalho com três fazendas diferentes e o agNOUT deixa tudo separado mas num só lugar. A equipe de campo adotou fácil — é simples de usar no celular, mesmo sem internet boa. Recomendo pra qualquer produtor que quer organização de verdade.",
   },
@@ -32,21 +32,21 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28" style={{ backgroundColor: "#1C1C1C" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-semibold mb-4"
-            style={{ backgroundColor: "#e8f5e9", color: "#1C5C1C" }}
+            style={{ backgroundColor: "rgba(45, 90, 39, 0.2)", color: "#8DD889" }}
           >
             Depoimentos
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight" style={{ color: "#EFEFEF" }}>
             O que dizem nossos{" "}
-            <span style={{ color: "#1C5C1C" }}>produtores</span>
+            <span style={{ color: "#6DC267" }}>produtores</span>
           </h2>
-          <p className="text-lg text-gray-500 max-w-xl mx-auto">
+          <p className="text-lg max-w-xl mx-auto" style={{ color: "#AAAAAA" }}>
             Fazendas de todo o Brasil já usam o agNOUT para organizar sua
             operação do campo ao escritório.
           </p>
@@ -57,11 +57,12 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="relative flex flex-col rounded-2xl p-6 border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow"
+              className="relative flex flex-col rounded-2xl p-6 border transition-shadow"
+              style={{ backgroundColor: "#242424", borderColor: "#333333" }}
             >
               {/* Quote icon */}
               <Quote
-                className="w-8 h-8 mb-4 opacity-10"
+                className="w-8 h-8 mb-4 opacity-20"
                 style={{ color: t.color }}
                 strokeWidth={1.5}
               />
@@ -78,23 +79,26 @@ export default function Testimonials() {
               </div>
 
               {/* Quote text */}
-              <p className="text-sm text-gray-600 leading-relaxed flex-1 mb-6">
+              <p className="text-sm leading-relaxed flex-1 mb-6" style={{ color: "#BBBBBB" }}>
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+              <div
+                className="flex items-center gap-3 pt-4 border-t"
+                style={{ borderColor: "#333333" }}
+              >
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-                  style={{ backgroundColor: t.color }}
+                  style={{ backgroundColor: t.color + "33", color: t.color }}
                 >
                   {t.avatar}
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-900">
+                  <div className="text-sm font-semibold" style={{ color: "#EFEFEF" }}>
                     {t.name}
                   </div>
-                  <div className="text-xs text-gray-400">
+                  <div className="text-xs" style={{ color: "#666666" }}>
                     {t.role} · {t.farm}
                   </div>
                 </div>
